@@ -100,7 +100,7 @@ func NewCodec(schemaSpecification string) (*Codec, error) {
 	if err != nil {
 		return nil, err
 	}
-	c.schemaCanonical, err = parsingCanonicalForm(schema, "", make(map[string]string))
+	c.schemaCanonical, err = parsingCanonicalForm(schema)
 	if err != nil {
 		return nil, err // should not get here because schema was validated above
 	}
